@@ -99,3 +99,13 @@ function copyText(input) {
 function putItBack() {
   document.getElementById("emailText").innerText = "Benjaminljw17@gmail.com"
 }
+
+function scaryTime() {
+  $("#myFace").attr('src', 'PufferfishLeMoi.jpg')
+  $("#myName").text('Lom Jiom Woi Bonjomon')
+}
+
+function backToNormal() {
+  $("#myFace").attr('src', 'FaceLeMoi.jpg')
+  $("#myName").text('Lim Jian Wei Benjamin')
+}
