@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/9bc9cda230.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="hero has-background-white-ter">
+        <div class="hero-body has-background-grey-lighter">
+            <h1 class="title is-1 has-text-dark has-text-centered">Server Availability Page</h1>
+            <div class="has-text-centered">
+                <a href="index.html" class="button is-dark">
+                    <span class="icon">
+                        <i class="fas fa-house"></i>
+                    </span>
+                    <span>Home</span></a>
+                <a href="tryItYourself.html" class="button is-dark">
+                    <span class="icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </span>
+                    <span>Try it yourself</span></a>
+            </div>
+        </div><br>
+
+        <div class="box is-rounded-4 has-text-centered">
+            <p class="title">How does it work? Simple.</p>
+            <p class="subtitle">This page uses a javascript library called <a href="https://github.com/alfg/ping.js"
+                    target="_blank">Ping.js</a>.</p>
+            <p>Since Javascript does not have a native way to send pings due to XHR requests being affected by
+                cross-domain issues (CORS), they are blocked by default.</p>
+            <p>Ping.js uses a method of loading a host's favicon.ico image, and recording it's response time. If the
+                favicon image does not exist, it will <br> print an error along with it's ping value (recorded in ms).
+            </p><br>
+            <table class="table mx-auto is-bordered">
+
+                <tr>
+                    <th class="has-text-centered">Color</th>
+                    <th class="has-text-centered">Meaning</th>
+                    <th class="has-text-centered">Numbers</th>
+                </tr>
+
+                <tr>
+                    <td class="has-text-success">Green</td>
+                    <td>Latency to server is good.</td>
+                    <td>0 - 70ms</td>
+                </tr>
+
+                <tr>
+                    <td class="has-text-warning">Orange</td>
+                    <td>Latency to server is decent.</td>
+                    <td>71 - 100ms</td>
+                </tr>
+
+                <tr>
+                    <td class="has-text-danger">Red</td>
+                    <td>Latency to server is high.</td>
+                    <td>&gt; 100ms</td>
+                </tr>
+            </table>
+            <p class="is-size-7">For more accurate results, ping it at least 5 times - and then average those numbers.</p>
+        </div>
+    </section>
+</body>
+<script defer src="index.js"></script>
+
+</html>

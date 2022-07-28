@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/9bc9cda230.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="hero has-background-white-ter">
+        <div class="hero-body has-background-grey-lighter has-text-centered">
+            <h1 class="title is-1 has-text-dark">Server Availability Page</h1>
+            <p class="subtitle">Who's down, you or them? Find out here.</p>
+            <div class="has-text-centered">
+
+                <a href="howItWorks.html" class="button is-dark">
+                    <span class="icon">
+                        <i class="fas fa-question"></i>
+                    </span>
+                    <span>How it works</span></a>
+
+                <a href="tryItYourself.html" class="button is-dark">
+                    <span class="icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </span>
+                    <span>Try it yourself</span></a>
+
+            </div>
+        </div><br>
+
+        <div class="box is-rounded-4 has-text-centered">
+            <div>
+                <button class="button is-dark fas fa-arrows-rotate" onclick="history.go(0)"></button>
+            </div><br>
+            <p></p>
+            <table class="table is-hoverable mx-auto">
+
+                <tr>
+                    <th>Server Name</th>
+                    <th>Latency(ms)</th>
+                </tr>
+
+                <tr>
+                    <td><a href="https://google.com" class="has-text-dark is-underlined" target="_blank">Google</a></td>
+                    <td><span id="ping-google">Pinging...</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="https://youtube.com" class="has-text-dark is-underlined" target="_blank">Youtube</a>
+                    </td>
+                    <td><span id="ping-youtube">Pinging...</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="https://cloudflare.com" class="has-text-dark is-underlined"
+                            target="_blank">Cloudflare</a></td>
+                    <td><span id="ping-cloudflare">Pinging...</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="https://github.com" class="has-text-dark is-underlined" target="_blank">Github</a></td>
+                    <td><span id="ping-github">Pinging...</span></td>
+                </tr>
+
+                <tr>
+                    <td><a href="https://twitter.com" class="has-text-dark is-underlined" target="_blank">Twitter</a>
+                    </td>
+                    <td><span id="ping-twitter">Pinging...</span></td>
+                </tr>
+            </table>
+            <p class="is-size-7">Note that this information may not be 100% accurate.<br>Check out the "How it works"
+                Section.</p>
+        </div>
+    </section>
+    <div class="has-text-centered pt-3">
+        <button onclick="$('#namecard').show(0)" class="button is-dark">Namecard</button>
+    </div>
+    <div id="namecard" class="modal is-active" style="display: none">
+        <div class="modal-background" onclick="$('#namecard').hide(0)"></div>
+        <div class="modal-content">
+            <div class="box has-background-grey-light has-text-centered">
+                <div class="box has-background-white-ter">
+                    <figure class="mx-auto image is-96x96">
+                        <img src="FaceLeMoi.jpg" alt="My face would go here" class="is-rounded">
+                    </figure>
+                    <h1 class="title is-3 has-text-dark">Lim Jian Wei Benjamin</h1>
+                    <p class="subtitle">Student of <a class="has-text-dark is-underlined"
+                            href="https://nyp.edu.sg">Nanyang Polytechnic Singapore</a> (NYP)<br>School of Information
+                        Technology (SIT)<br>
+                        Admin No: <strong>224472K</strong></p>
+                    <hr class="has-background-dark">
+                    <p class="has-text-weight-bold">
+                        <span class="icon mt-2"><i class="fas fa-at fa-xl"></i></span>
+                        <button id="emailText" class="button is-dark"
+                            onclick="copyText('Benjaminljw17@gmail.com')">Benjaminljw17@gmail.com</button>
+                    </p>
+
+                    <p class="mt-1">
+                        <span class="icon mt-2"><i class="fab fa-github fa-xl"></i></span>
+                        <button class="button is-dark"><a href="https://github.com/Kyuri-Oji" target="_blank"
+                                class="has-text-white">https://github.com/Kyuri-Oji</a></button>
+                    </p>
+
+                    <p class="mt-1">
+                        <span class="icon"><i class="fas fa-phone"></i></span>
+                        +65 96191883
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button onclick="$('#namecard').hide(0)" class="modal-close is-large" aria-label="close"></button>
+    </div>
+</body>
+
+<script defer src="index.js"></script>
+
+</html>
